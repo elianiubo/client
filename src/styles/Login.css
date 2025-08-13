@@ -1,0 +1,41 @@
+.login-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* .login-page h1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  text-align: center;
+} */
+
+/* .login-page form {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+} */
+
+.login-page input {
+  /* grid-column: 1 / 2;
+  grid-row: 2 / 3; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-page button[type="submit"] {
+  /* grid-column: 1 / 2;
+  grid-row: 3 / 4; */
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-page button[type="submit"]:hover {
+  background-color: #3e8e41;
+}

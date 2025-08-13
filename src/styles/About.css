@@ -1,0 +1,181 @@
+
+/* .about-first-title {
+    color: var(--gold-metallic);
+    text-align: center;
+
+}
+
+.about-main-text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+   
+    line-height: 1.6;
+
+
+}
+
+.highlight-yellow {
+    border-bottom: solid 2px var(--gold-light);
+    color: var(--gold-light);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+   
+
+}
+.second-content{
+
+    text-align: center;
+}
+.image-container img {
+    width: 40%;
+
+
+} */
+/* === First Section (Text + Languages) === */
+.first-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+/* .titles-pages {
+    color: var(--gold-metallic);
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.titles-pages::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--gold-light);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+} */
+
+.about-main-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    max-width: 800px;
+    color: #dcdcdc;
+    text-align: justify;
+}
+
+
+.highlight-yellow {
+    
+    color:rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--gold-light);
+}
+
+/* === Languages List === */
+.about-languages-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: rgb(201, 201, 201);
+    font-weight: 600;
+    
+}
+.about-languages-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.about-languages-li {
+    font-size: 1.05rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 215, 0, 0.08);
+    border: 1px solid var(--gold-light);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.about-languages-li:hover {
+    background: var(--gold-light);
+    color: #0a0a0a;
+}
+
+/* === Second Section (Map) === */
+.second-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-second-title {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    text-align: center;
+    color: var(--gold-metallic);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-container img {
+    width: 70%;
+    max-width: 600px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
+}
+
+/* === Responsive Two-Column Layout === */
+/* @media (min-width: 992px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    
+
+    .second-content {
+        flex: 1;
+        align-items: center;
+    }
+} */
+
+@media (max-width: 768px) {
+    .about-first-title {
+        font-size: 2rem;
+    }
+
+    .about-main-text {
+        font-size: 1rem;
+    }
+
+    .image-container img {
+        width: 90%;
+    }
+}

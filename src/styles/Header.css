@@ -1,0 +1,27 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.859);
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:  1px solid var(--gold-shadow); 
+  
+}
+
+.logo-h1 {
+  color: var(--gold-bright);
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.logo-h1:hover {
+  color:#f9d85793;
+  transition: color 0.5s ease-in-out;
+  
+}
