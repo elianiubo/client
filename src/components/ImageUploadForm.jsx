@@ -29,7 +29,7 @@ export default function ImageUploadForm({ triggerUpdate }) {
   const handleFileChange = (e) => {
     const selected = [...e.target.files];
     if (selected.length > 4) {
-      alert("⚠️ Solo puedes subir hasta 4 imágenes.");
+      alert(" Solo puedes subir hasta 4 imágenes.");
       return;
     }
     setFiles(selected);
