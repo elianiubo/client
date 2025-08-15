@@ -16,6 +16,7 @@ function MainHome() {
         setVarUrl(res.data.url);
       } catch (err) {
         console.error("Error al cargar la variable:", err);
+        setVarUrl(""); // fallback
       }
     };
     fetchImage();
