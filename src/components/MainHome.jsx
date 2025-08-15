@@ -14,6 +14,7 @@ function MainHome() {
         const id = 2;
         const res = await axios.get(`${ENDPOINTS.VARIABLES}/${id}`);
         setVarUrl(res.data.url);
+        
       } catch (err) {
         console.error("Error al cargar la variable:", err);
         setVarUrl(""); // fallback

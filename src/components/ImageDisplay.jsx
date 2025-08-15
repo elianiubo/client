@@ -16,6 +16,8 @@ export default function ImageDisplay() {
     const fetchImages = async () => {
       try {
         const res = await axios.get(ENDPOINTS.IMAGES);
+        console.log(ENDPOINTS.IMAGES); // should be https://server-production-2b2e.up.railway.app/api/images
+
         setImages(res.data);
       } catch (err) {
         console.error("Error al cargar imágenes:", err);
