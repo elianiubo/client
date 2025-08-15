@@ -7,5 +7,4 @@ export const ENDPOINTS = {
   UPLOAD_MULTIPLE_IMAGES: `${API_URL}/api/upload-multiple`,
   VARIABLES: `${API_URL}/api/variables`,
 
-  // Puedes agregar más endpoints aquí
 };
