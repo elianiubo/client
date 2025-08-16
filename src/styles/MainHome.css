@@ -120,9 +120,7 @@
 
 /* Phones */
 @media (max-width: 768px) {
-  .main{
-    height: 100vh;
-  }
+
   .hero-title{
     font-size: 2.3rem;
 
