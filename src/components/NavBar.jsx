@@ -12,7 +12,7 @@ export default function NavBar({ update }) {
     const fetchCategories = async () => {
       try {
         const res = await axios.get(ENDPOINTS.IMAGE_CATEGORIES);
-        console.log("Categories API response:", res.data);
+        
         // res.data debe ser un array de strings (categorías)
         const uniqueCategories = [...new Set(res.data.map(cat => cat?.trim()))].filter(Boolean);
         setCategories(uniqueCategories);
