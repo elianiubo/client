@@ -25,7 +25,7 @@
 .logo-h1:hover {
   color: var(--gold-light);
   transition: color 0.3s ease-in-out;
-  transform: scale(1.2); /* zoom in */
+  transform: scale(3); /* zoom in */
   
 }
 
