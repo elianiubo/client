@@ -61,7 +61,7 @@ html {
   min-height: 100vh;
 } */
 .container{
-  padding: 8.75rem 2rem 2rem 2rem;
+  padding: 8.75rem 1rem 1rem 1rem;
   /* padding-top: 140px; 
   padding-left: 2rem;
   padding-right: 2rem;
@@ -71,6 +71,11 @@ html {
   /* max-width: 1600px; */
   min-height: calc(100vh - 25px - 15rem); /* 100vh menos el header menos el margin-top del footer */
 }
+/* @media (max-width: 668px) {
+.container{
+  padding: 8.75rem 1rem 1rem 1rem;
+} */
+/* } */
 .titles-pages {
     color: var(--gold-metallic);
     font-size: 2.8rem;
@@ -89,45 +94,30 @@ html {
     margin: 0.5rem auto 0;
     border-radius: 2px;
 }
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ✅ Responsive adjustments */
+@media (max-width: 1024px) {
+  .titles-pages {
+    font-size: 2.4rem;
   }
-  to {
-    transform: rotate(360deg);
+  .titles-pages::after {
+    width: 70px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .titles-pages {
+    font-size: 2rem;
+  }
+  .titles-pages::after {
+    width: 60px;
   }
 }
 
-.card {
-  padding: 2em;
+@media (max-width: 480px) {
+  .titles-pages {
+    font-size: 1.6rem;
+  }
+  .titles-pages::after {
+    width: 50px;
+  }
 }
-
-.read-the-docs {
-  color: #888;
-} */

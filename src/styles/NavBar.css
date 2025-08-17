@@ -73,45 +73,7 @@
    .nav-links.open {
     display: flex;
   }
-/*
-  .has-submenu .category-title {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    width: auto;
-  }
 
-  .submenu {
-    position: static;
-    background-color: transparent;
-    padding-left: 1rem;
-    display: none;
-    box-shadow: none;
-  }
-
-  .submenu.open {
-    display: flex;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-
-  .submenu li {
-    margin: 0.3rem 0;
-    text-align: center;
-    border: none;
-  }
-
-  .submenu a {
-    color: white;
-    background: none;
-    padding: 0.5rem 0;
-  }
-
-  .submenu a:hover {
-    background: none;
-    border-bottom: 1px solid white;
-  } */
 }
 
 /* ====== Desktop Hover Triangle ====== */

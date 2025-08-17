@@ -10,10 +10,12 @@ import ImagePage from "./pages/ImagePage"; // Asegúrate de que esta ruta sea co
 import About from "./pages/About";
 import { isAuth } from "./utils/auth"; // Asegúrate de que esta ruta sea correcta
 import PrivateRoute from "./components/PrivateRoute";
+import ScrollToTop from "./components/ScrollToTop"; // Asegúrate de que esta ruta sea correcta
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />  {/* 👈 This ensures new page loads at top */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

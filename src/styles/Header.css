@@ -19,9 +19,14 @@
   text-decoration: none;
   font-size: 1.5rem;
   text-align: center;
+  transition: all 0.3s ease;
+
 }
 .logo-h1:hover {
-  color:#f9d85793;
-  transition: color 0.5s ease-in-out;
+  color: var(--gold-light);
+  transition: color 0.3s ease-in-out;
+  transform: scale(1.2); /* zoom in */
   
 }
+
+

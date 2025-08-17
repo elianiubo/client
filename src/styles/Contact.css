@@ -5,7 +5,7 @@
   padding-left: 2rem;
   padding-right: 2rem;
   /* max-width: 1400px; */
-  /* background: rgb(26, 25, 25); 
+/* background: rgb(26, 25, 25); 
   margin: 0px auto;
   min-height: calc(100vh - 25px - 15rem);
 } */
@@ -20,7 +20,27 @@
   flex-direction: column;
   width: 40%;
   margin: auto;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
+}
+
+/* Make it responsive */
+@media (max-width: 1024px) {
+  .form-contact {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-contact {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-contact {
+    width: 95%;
+    padding: 0 1rem 2rem 1rem;
+  }
 }
 
 .row {
@@ -33,6 +53,7 @@
 .label-contact {
 
   margin-bottom: 1rem;
+
 }
 
 /*Input inner styles*/
@@ -40,24 +61,40 @@ input[type="text"],
 input[type="email"],
 textarea {
   width: 100%;
-  /* Full width */
   padding: 10px;
-  /* Inner spacing */
-  /* margin: 10px 0; Space between fields */
-  border: 1px solid #ccc;
-  /* Border color */
+  border: 1px solid #aaaa;
+  font-family: 'Poppins', sans-serif;
   border-radius: 5px;
-  /* Rounded corners */
   font-size: 16px;
-  /* Font size */
   box-sizing: border-box;
-  /* Prevent padding from affecting width */
+
 }
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: #7b7b7b;
+  /* softer placeholder */
+}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
-textarea:focus{
+textarea:focus {
 
   outline: 3px solid var(--gold-metallic);
+}
+
+/* Make it responsive */
+
+@media (max-width: 480px) {
+
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  textarea::placeholder {
+    font-size: 0.8rem;
+
+  }
 }
 
 /*Button*/
@@ -72,7 +109,7 @@ textarea:focus{
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background 0.3s;
-  padding-top:1rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 1rem;
 
@@ -86,52 +123,10 @@ textarea:focus{
 }
 
 /*Success and error message*/
-.error-message, .success-message {
+.error-message,
+.success-message {
   text-align: center;
   margin-top: 1rem;
   color: var(--gold-metallic);
   font-weight: bold;
 }
-/* .form button {
-  background-color: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.form button:hover {
-  background-color: white;
-  color: black;
-} */
-/* .button-contact {
-  border: 1px solid white;
-  padding: 0.6rem 1.2rem;
-  text-align: center;
-  text-decoration: none;
-  width: 30%;
-  margin: auto;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: background-color 0.7s, color 0.7s ease-in-out;
-} */
-
-/* .button-contact{
-
-  padding: 0.6rem 1.2rem;
-  margin-top: 1.5rem;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: background-color 0.7s, color 0.7s ease-in-out;
-} */
-
-/* .button-contact:hover {
-background-color: var(--gold-metallic);
-  color: black;
-  border: 1px solid var(--gold-metallic);
-  
-} */

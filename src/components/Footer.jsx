@@ -11,8 +11,8 @@ function Footer() {
           <a href="mailto:elia@elia.com"><AiOutlineMail /></a>
           <a href="https://nl.linkedin.com/in/giammarcoincarnato"><AiOutlineLinkedin /></a>
         </div>
-        <p>© {new Date().getFullYear()} Giacco Photography. All rights reserved.</p>
-        <p>KVK: 568974589</p>
+        <p className="text">© {new Date().getFullYear()} Giacco Photography. All rights reserved.</p>
+        <p className="text">KVK: 568974589</p>
 
 
         <p className="footer-made-by">Made by Elia Niubo</p>
