@@ -13,17 +13,7 @@
   padding-top: 1.3rem;
 }
 
-@media (max-width: 1024px) {
-  .image-grid {
-    column-count: 2;
-  }
-}
 
-@media (max-width: 600px) {
-  .image-grid {
-    column-count: 1;
-  }
-}
 
 .image-card {
   margin-bottom: 1rem;
@@ -38,7 +28,35 @@
   width: 100%;
   height: auto;
   display: block; 
-}/*
+
+
+
+}
+@media (max-width: 1024px) {
+  .image-grid {
+    column-count: 2;
+  }
+  .image-card{
+    border:1.4rem solid white;
+  }
+}
+@media (max-width: 750px) {
+  .image-card{
+    border:1.2rem solid white;
+  }
+
+}
+@media (max-width: 600px) {
+  .image-grid {
+    column-count: 1;
+  }
+  .image-card{
+    border:1.1rem solid white;
+  }
+  
+}
+
+/*
 
 .image-grid {
   display: grid;
