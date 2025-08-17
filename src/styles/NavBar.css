@@ -33,7 +33,10 @@
  {
   border-bottom: 3px solid var(--gold-base);
 }
-
+.nav-links a.active {
+  border-bottom: 3px solid var(--gold-base);
+  
+}
 /* Hamburger Button*/
 .menu-toggle {
   display: none;
