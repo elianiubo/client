@@ -61,7 +61,6 @@ export default function ImageDisplay() {
               loading="lazy"
               onLoad={(e) => handleImageLoad(e, image.id)}
               onClick={() => { setIsOpen(true); setCurrentIndex(index); }}
-              style={{ cursor: "pointer" }}
             />
           </div>
         ))}
@@ -73,7 +72,6 @@ export default function ImageDisplay() {
           close={() => setIsOpen(false)}
           slides={filteredImages.map((img) => ({ src: img.url, title: img.title }))}
           index={currentIndex}
-          style={{ top: "140px" }} // igual a la altura de tu header
         />
       )}
     </div>
