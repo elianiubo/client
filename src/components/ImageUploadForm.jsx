@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { PREDEFINED_CATEGORIES, ENDPOINTS } from "../config";
+import "../styles/Login.css"
 
 export default function ImageUploadForm({ triggerUpdate }) {
   const [files, setFiles] = useState([]);
@@ -69,15 +70,7 @@ export default function ImageUploadForm({ triggerUpdate }) {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "1rem",
-        maxWidth: "400px",
-      }}
-    >
+     <form onSubmit={handleSubmit} className="image-upload-form">
       <input
         type="file"
         accept="image/*"

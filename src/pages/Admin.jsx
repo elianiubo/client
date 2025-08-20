@@ -2,9 +2,9 @@ import React,{useEffect, useState} from "react";
 import ImageUploadForm from "../components/ImageUploadForm";
 import ImageGallery from "../components/ImageGallery";
 import Header from "../components/Header";
-import { isAuth } from "../utils/auth";
+import "../styles/Login.css"
 import { useNavigate } from "react-router-dom";
-import NavBar from "../components/NavBar";
+
 
 export default function Admin() {
   const navigate = useNavigate();
@@ -13,12 +13,12 @@ export default function Admin() {
   const triggerUpdate = () => setUpdate(prev => !prev);
 
   return (
-    <div style={{ paddingTop: "100px" }}>
+     <div className="admin-page">
       <Header update={update} />
-      <div style={{ padding: "2rem" }}>
+      <div className="admin-content">
         <h2>Panel Admin</h2>
         <ImageUploadForm triggerUpdate={triggerUpdate} />
-        <hr style={{ margin: "2rem 0" }} />
+        <hr className="admin-divider" />
         <ImageGallery update={update} />
       </div>
     </div>

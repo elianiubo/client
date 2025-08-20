@@ -1,9 +1,11 @@
+/*LOGIN STYLES*/
 .login-page {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 20px;
   padding: 20px;
+  
 }
 
 /* .login-page h1 {
@@ -29,7 +31,7 @@
   /* grid-column: 1 / 2;
   grid-row: 3 / 4; */
   padding: 10px;
-  background-color: #4CAF50;
+  background-color:var(--gold-metallic);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -37,5 +39,56 @@
 }
 
 .login-page button[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: var( --gold-warm);
 }
+
+/*ADMIN STYLES*/
+/*ADMIN PAGE*/
+.admin-page {
+  padding-top: 100px;
+}
+
+.admin-content {
+  padding: 2rem;
+}
+
+.admin-content h2 {
+  margin-bottom: 1rem;
+}
+
+.admin-divider {
+  margin: 2rem 0;
+}
+/*UPLOAD FORM*/
+.image-upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+/*IMAGE GALLERY*/
+.image-gallery {
+  padding: 2rem;
+}
+
+.category-title-admin{
+  margin-top: 2rem;
+  border-bottom: 1px solid #999;
+}
+
+.image-grid-admin {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.image-card-admin {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.image-card-admin img {
+  width: 100%;
+}
+
+

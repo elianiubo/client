@@ -25,7 +25,7 @@ export default function Login() {
 
   return (
     <form onSubmit={handleLogin} className="login-page">
-      <h2>Login Page Admin</h2>
+      <h1>Login Page Admin</h1>
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="Correo" />
       <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="Contraseña" />
       <button type="submit">Entrar</button>

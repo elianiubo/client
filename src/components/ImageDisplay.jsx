@@ -5,19 +5,22 @@ import axios from "axios";
 import "../styles/ImageDisplay.css";
 import { capitalizeWords, formatParam } from "../utils/helpers";
 import { ENDPOINTS } from "../config";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 export default function ImageDisplay() {
   const { category } = useParams();
   const cleanCategory = formatParam(category);
   const [images, setImages] = useState([]);
   const [imageMeta, setImageMeta] = useState({});
+  // Lightbox state
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
         const res = await axios.get(ENDPOINTS.IMAGES);
-        console.log(ENDPOINTS.IMAGES); // should be https://server-production-2b2e.up.railway.app/api/images
-
         setImages(res.data);
       } catch (err) {
         console.error("Error al cargar imágenes:", err);
@@ -42,29 +45,37 @@ export default function ImageDisplay() {
   );
 
   return (
-  <div className="container">
-    {cleanCategory && (
-      <h2 className="titles-pages centered">
-        {capitalizeWords(cleanCategory)}'s Collection
-      </h2>
-    )}
+    <div className="container">
+      {cleanCategory && (
+        <h2 className="titles-pages centered">
+          {capitalizeWords(cleanCategory)}'s Collection
+        </h2>
+      )}
 
-    <div className="image-grid">
-      {filteredImages.map((image) => {
-       
-
-        return (
+      <div className="image-grid">
+        {filteredImages.map((image, index) => (
           <div key={image.id} className="image-card">
             <img
               src={image.url}
               alt={image.title}
               loading="lazy"
               onLoad={(e) => handleImageLoad(e, image.id)}
+              onClick={() => { setIsOpen(true); setCurrentIndex(index); }}
+              style={{ cursor: "pointer" }}
             />
           </div>
-        );
-      })}
+        ))}
+      </div>
+
+      {isOpen && (
+        <Lightbox
+          open={isOpen}
+          close={() => setIsOpen(false)}
+          slides={filteredImages.map((img) => ({ src: img.url, title: img.title }))}
+          index={currentIndex}
+          style={{ top: "140px" }} // igual a la altura de tu header
+        />
+      )}
     </div>
-  </div>
-);
+  );
 }

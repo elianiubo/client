@@ -45,27 +45,17 @@ export default function ImageGallery({ update }) {
   }, {});
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div className="image-gallery">
       <h2>Galería</h2>
       {Object.entries(groupedByCategory).length === 0 && <p>No images to show.</p>}
       {Object.entries(groupedByCategory).map(([cat, imgs]) => (
         <div key={cat}>
-          <h3 style={{ marginTop: "2rem", borderBottom: "1px solid #999" }}>
-            Category: {cat}
-          </h3>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-              gap: "1rem",
-            }}
-          >
+          <h3 className="category-title-admin">Category: {cat}</h3>
+          <div className="image-grid-admin">
             {imgs.map((img) => (
-              <div key={img.id} style={{ border: "1px solid #ccc", padding: "1rem" }}>
-                <img src={img.url} alt={img.title} style={{ width: "100%" }} />
-                {/* <h4>{img.title}</h4> */}
+              <div key={img.id} className="image-card-admin">
+                <img src={img.url} alt={img.title} />
                 <button onClick={() => handleDelete(img.id)}>🗑️Delete</button>
-                
               </div>
             ))}
           </div>
