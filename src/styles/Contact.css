@@ -134,3 +134,10 @@ textarea:focus {
   color: var(--gold-metallic);
   font-weight: bold;
 }
+@media (max-width: 480px) {
+.error-message,
+.success-message{
+  font-size:0.8rem ;
+}
+  
+}

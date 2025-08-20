@@ -67,6 +67,7 @@ export default function ImageDisplay() {
       </div>
 
       {isOpen && (
+        // Lightbox component to display images in a carrousel
         <Lightbox
           open={isOpen}
           close={() => setIsOpen(false)}
@@ -74,8 +75,8 @@ export default function ImageDisplay() {
           slides={filteredImages.map((img) => ({
             src: img.url,
             title: img.title,
-            width: imageMeta[img.id]?.width,   // ✅ optional but helps avoid layout shift
-            height: imageMeta[img.id]?.height, // ✅
+            width: imageMeta[img.id]?.width,   
+            height: imageMeta[img.id]?.height, 
           }))}
         />
       )}

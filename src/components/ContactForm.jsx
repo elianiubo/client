@@ -38,7 +38,7 @@ export default function ContactForm() {
     }
     try {
       await axios.post(ENDPOINTS.CONTACT, formData);
-      alert("Message sent!");
+      // alert("Message sent!");
       setFormData({ name: "", surname: "", email: "", message: "" });
       setError('');
       setSuccess(true);

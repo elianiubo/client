@@ -68,8 +68,9 @@ html {
   padding-bottom: 2rem; */
   margin-right: 2rem;
   margin-left: 2rem;
+  min-height: calc(100vh - 110px - 15rem);
   /* max-width: 1600px; */
-  min-height: calc(100vh - 25px - 15rem); /* 100vh menos el header menos el margin-top del footer */
+  /* min-height: calc(100vh - 25px - 15rem); 100vh menos el header menos el margin-top del footer */
 }
 /* @media (max-width: 668px) {
 .container{
