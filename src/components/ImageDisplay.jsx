@@ -6,7 +6,7 @@ import "../styles/ImageDisplay.css";
 import { capitalizeWords, formatParam } from "../utils/helpers";
 import { ENDPOINTS } from "../config";
 import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+
 
 export default function ImageDisplay() {
   const { category } = useParams();
@@ -70,8 +70,13 @@ export default function ImageDisplay() {
         <Lightbox
           open={isOpen}
           close={() => setIsOpen(false)}
-          slides={filteredImages.map((img) => ({ src: img.url, title: img.title }))}
           index={currentIndex}
+          slides={filteredImages.map((img) => ({
+            src: img.url,
+            title: img.title,
+            width: imageMeta[img.id]?.width,   // ✅ optional but helps avoid layout shift
+            height: imageMeta[img.id]?.height, // ✅
+          }))}
         />
       )}
     </div>
