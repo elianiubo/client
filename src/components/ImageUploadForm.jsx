@@ -55,7 +55,6 @@ export default function ImageUploadForm({ triggerUpdate }) {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
         },
-         withCredentials: true
       });
 
       alert("✅ Imágenes subidas con éxito");
