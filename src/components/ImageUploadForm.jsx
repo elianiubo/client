@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { PREDEFINED_CATEGORIES, ENDPOINTS } from "../config";
+import { PREDEFINED_CATEGORIES, ENDPOINTS, CLOUDINARY_URL } from "../config";
 import "../styles/Login.css"
 
 export default function ImageUploadForm({ triggerUpdate }) {
@@ -58,7 +58,7 @@ export default function ImageUploadForm({ triggerUpdate }) {
         formData.append("upload_preset", "signed_preset_elia"); // REEMPLAZA ESTO
         formData.append("folder", category.trim()); // aquí usas la categoría como carpeta
 
-        const res = await fetch("https://api.cloudinary.com/v1_1/dcgj0tvya/image/upload", {
+        const res = await fetch(CLOUDINARY_URL, {
           method: "POST",
           body: formData,
         });

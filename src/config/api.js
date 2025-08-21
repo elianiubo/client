@@ -9,3 +9,4 @@ export const ENDPOINTS = {
   GUARDAR_URL: "https://api.elianiubo.com/api/guardar-url"
 
 };
+export const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dcgj0tvya/image/upload";
