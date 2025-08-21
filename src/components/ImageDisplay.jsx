@@ -61,9 +61,22 @@ export default function ImageDisplay() {
               loading="lazy"
               onLoad={(e) => handleImageLoad(e, image.id)}
               onClick={() => { setIsOpen(true); setCurrentIndex(index); }}
-              onError={(e) => {
+              onError={async (e) => {
                 const card = e.target.closest(".image-card");
-                if (card) card.style.display = "none"; // Oculta el contenedor completo
+                const imageId = image.id;
+
+                if (card) card.style.display = "none";
+
+                try {
+                  await axios.delete(`${ENDPOINTS.IMAGES}/${imageId}`, {
+                    headers: {
+                      Authorization: `Bearer ${token}`, // Si usas auth
+                    },
+                  });
+                  console.log(`🧹 Imagen ${imageId} eliminada del backend`);
+                } catch (err) {
+                  console.error("❌ Error al eliminar de la base de datos:", err);
+                }
               }}
             />
           </div>
