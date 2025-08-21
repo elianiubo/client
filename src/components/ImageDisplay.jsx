@@ -6,6 +6,7 @@ import "../styles/ImageDisplay.css";
 import { capitalizeWords, formatParam } from "../utils/helpers";
 import { ENDPOINTS } from "../config";
 import Lightbox from "yet-another-react-lightbox";
+const token = localStorage.getItem("token");
 
 
 export default function ImageDisplay() {
