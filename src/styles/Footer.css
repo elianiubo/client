@@ -23,14 +23,14 @@
   justify-content: center;
   gap: 2rem;
 }
-.footer-content a {
+.footer-content .icon {
   margin: 0 0.4rem;
   font-size: 1.7rem;
   color: #aaa;
   transition: all 0.3s ease;
   position: relative;
 }
-.footer-content a:hover {
+.footer-content .icon:hover {
   color: var(--gold-metallic);
   transform: scale(1.2); /* zoom in */
   text-shadow: 0 0 10px var(--gold-shadow), 0 0 20px var(--gold-light);
@@ -43,10 +43,16 @@
   color: #eee;
 }
 
-.footer-made-by{
+.footer-made-by, .page-link{
   color: #aaaa;
   margin: 0.3rem 0;
   font-size: 0.7rem;
+  font-weight: 600;
+  
+}
+.page-link:hover{
+color: var(--gold-metallic);
+transition: color 0.5s ease-out;
 }
 /* Responsive adjustments */
 @media (max-width: 600px) {

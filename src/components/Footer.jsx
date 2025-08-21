@@ -7,15 +7,15 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-icons">
-          <a href="https://www.instagram.com/giacco_photography/"><FaInstagram /></a>
-          <a href="mailto:elia@elia.com"><AiOutlineMail /></a>
-          <a href="https://nl.linkedin.com/in/giammarcoincarnato"><AiOutlineLinkedin /></a>
+          <a className="icon" href="https://www.instagram.com/giacco_photography/"><FaInstagram /></a>
+          <a className="icon" href="mailto:elia@elia.com"><AiOutlineMail /></a>
+          <a className="icon" href="https://nl.linkedin.com/in/giammarcoincarnato"><AiOutlineLinkedin /></a>
         </div>
         <p className="text">© {new Date().getFullYear()} Giacco Photography. All rights reserved.</p>
         <p className="text">KVK: 568974589</p>
 
 
-        <p className="footer-made-by">Made by Elia Niubo</p>
+        <p className="footer-made-by">Made by <a className="page-link" href="https://github.com/elianiubo">Elia Niubo</a></p>
 
       </div>
     </footer>

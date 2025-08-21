@@ -61,6 +61,10 @@ export default function ImageDisplay() {
               loading="lazy"
               onLoad={(e) => handleImageLoad(e, image.id)}
               onClick={() => { setIsOpen(true); setCurrentIndex(index); }}
+              onError={(e) => {
+                const card = e.target.closest(".image-card");
+                if (card) card.style.display = "none"; // Oculta el contenedor completo
+              }}
             />
           </div>
         ))}
@@ -75,8 +79,8 @@ export default function ImageDisplay() {
           slides={filteredImages.map((img) => ({
             src: img.url,
             title: img.title,
-            width: imageMeta[img.id]?.width,   
-            height: imageMeta[img.id]?.height, 
+            width: imageMeta[img.id]?.width,
+            height: imageMeta[img.id]?.height,
           }))}
         />
       )}
