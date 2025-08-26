@@ -30,7 +30,7 @@ function MainHome() {
 >
   <div className="overlay-content">
     <h1 className="hero-title">CRAFTING VISUAL STORIES</h1>
-    <p>I'm Giacco. A freelance photographer in the Netherlands</p>
+    <p>I'm Giacco. A freelance photographer based in the Netherlands</p>
     <Link to="/about" className="about-button">About Me →</Link>
   </div>
 </div>

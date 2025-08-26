@@ -12,7 +12,7 @@ function Footer() {
           <a className="icon" href="https://nl.linkedin.com/in/giammarcoincarnato"><AiOutlineLinkedin /></a>
         </div>
         <p className="text">© {new Date().getFullYear()} Giacco Photography. All rights reserved.</p>
-        <p className="text">KVK: 568974589</p>
+        <p className="text">KVK: 97297488</p>
 
 
         <p className="footer-made-by">Made by <a className="page-link" href="https://github.com/elianiubo">Elia Niubo</a></p>

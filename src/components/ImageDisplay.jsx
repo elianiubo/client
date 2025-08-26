@@ -6,7 +6,6 @@ import "../styles/ImageDisplay.css";
 import { capitalizeWords, formatParam } from "../utils/helpers";
 import { ENDPOINTS } from "../config";
 import Lightbox from "yet-another-react-lightbox";
-const token = localStorage.getItem("token");
 
 
 export default function ImageDisplay() {
@@ -62,23 +61,6 @@ export default function ImageDisplay() {
               loading="lazy"
               onLoad={(e) => handleImageLoad(e, image.id)}
               onClick={() => { setIsOpen(true); setCurrentIndex(index); }}
-              onError={async (e) => {
-                const card = e.target.closest(".image-card");
-                const imageId = image.id;
-
-                if (card) card.style.display = "none";
-
-                try {
-                  await axios.delete(`${ENDPOINTS.IMAGES}/${imageId}`, {
-                    headers: {
-                      Authorization: `Bearer ${token}`, // Si usas auth
-                    },
-                  });
-                  console.log(`🧹 Imagen ${imageId} eliminada del backend`);
-                } catch (err) {
-                  console.error("❌ Error al eliminar de la base de datos:", err);
-                }
-              }}
             />
           </div>
         ))}
@@ -93,8 +75,8 @@ export default function ImageDisplay() {
           slides={filteredImages.map((img) => ({
             src: img.url,
             title: img.title,
-            width: imageMeta[img.id]?.width,
-            height: imageMeta[img.id]?.height,
+            width: imageMeta[img.id]?.width,   
+            height: imageMeta[img.id]?.height, 
           }))}
         />
       )}

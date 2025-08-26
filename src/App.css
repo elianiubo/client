@@ -36,6 +36,13 @@
   font-weight: 600;
   font-style: italic;
 }
+/*For second text on main*/
+@font-face {
+  font-family: 'Antipasto Pro';
+  src: url("../src/fonts/AntipastoPro_trial.ttf") format('truetype');
+  font-style: italic;
+}
+
 
 /* Fondo y estructura general */
 body,
@@ -112,6 +119,7 @@ html {
   .titles-pages::after {
     width: 60px;
   }
+  
 }
 
 @media (max-width: 480px) {
