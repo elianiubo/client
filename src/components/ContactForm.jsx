@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Input from "./Input";
 import axios from "axios";
 import { ENDPOINTS } from "../config";
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+
 import { useRef } from 'react';
 import "../styles/Contact.css"
 const fields = [
