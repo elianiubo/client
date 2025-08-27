@@ -15,7 +15,7 @@ function Footer() {
         <p className="text">KVK: 97297488</p>
 
 
-        <p className="footer-made-by">Made by <a className="page-link" href="https://github.com/elianiubo">Elia Niubo</a></p>
+        <p className="footer-made-by">Made by <a className="page-link" href="www.elianiubo.com">Elia Niubo</a></p>
         <div className="footer-links">
           <a href="/privacy">Privacy Policy</a>
           <a href="/legal">Legal Notice</a>
