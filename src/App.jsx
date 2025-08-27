@@ -11,6 +11,8 @@ import About from "./pages/About";
 import { isAuth } from "./utils/auth"; // Asegúrate de que esta ruta sea correcta
 import PrivateRoute from "./components/PrivateRoute";
 import ScrollToTop from "./components/ScrollToTop"; // Asegúrate de que esta ruta sea correcta
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import LegalNotice from "./pages/LegalNotice";  
 import "yet-another-react-lightbox/styles.css";
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           }
         />
         <Route path="/:category" element={<ImagePage />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/legal" element={<LegalNotice />} />
 
       </Routes>
     </Router>

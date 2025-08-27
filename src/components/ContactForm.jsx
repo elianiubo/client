@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Input from "./Input";
 import axios from "axios";
 import { ENDPOINTS } from "../config";
+import HCaptcha from '@hcaptcha/react-hcaptcha';
+import { useRef } from 'react';
 import "../styles/Contact.css"
 const fields = [
   { label: "Name", name: "name", type: "text", placeholder: "Your name" },
@@ -10,6 +12,7 @@ const fields = [
   { label: "Message", name: "message", as: "textarea", placeholder: "Your message" },
 ];
 export default function ContactForm() {
+  const captchaRef = useRef();
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -62,6 +65,11 @@ export default function ContactForm() {
         />
 
       ))}
+      <HCaptcha
+        sitekey="your-hcaptcha-sitekey"
+        size="invisible"
+        ref={captchaRef}
+      />
       <button
         type="submit"
         className="button-contact"

@@ -54,6 +54,25 @@
 color: var(--gold-metallic);
 transition: color 0.5s ease-out;
 }
+
+/*Legal links*/
+.footer-links {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--gold-metallic);
+  text-decoration: underline;
+}
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .footer-content a {
