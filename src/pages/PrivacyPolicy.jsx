@@ -1,4 +1,4 @@
-import { color } from "chart.js/helpers";
+
 import React from "react";
 
 export default function PrivacyPolicy() {

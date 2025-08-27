@@ -65,11 +65,6 @@ export default function ContactForm() {
         />
 
       ))}
-      <HCaptcha
-        sitekey="your-hcaptcha-sitekey"
-        size="invisible"
-        ref={captchaRef}
-      />
       <button
         type="submit"
         className="button-contact"
