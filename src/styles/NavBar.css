@@ -81,12 +81,12 @@
 
 }
 
-/* ====== Desktop Hover Triangle ====== */
-@media (min-width: 970px) {
-  /* .has-submenu {
-    position: relative;
-    padding-bottom: 5px;
-  } */
+
+@media (max-width: 500px) {
+  .menu-toggle {
+    font-size: 1.7rem;
+    
+  }
 }
 
 /* ====== Fade Animation ====== */

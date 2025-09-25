@@ -30,3 +30,12 @@
 }
 
 
+@media (max-width: 500px) {
+  .header {
+    padding: 0.5rem 1rem;
+    
+  }
+  .logo-h1 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,24 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { api } from "../config";  // 👈 ahora existe
 import "../styles/Login.css"; // Asegúrate de tener un archivo CSS para estilos
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_API_URL;
+
   const handleLogin = async (e) => {
     e.preventDefault();
-
     try {
-      const res = await axios.post(`${API_URL}/login`, {
-        email,
-        password,
-      });
-
-      localStorage.setItem("token", res.data.token);
+      await axios.post("/login", { email, password });
       navigate("/admin");
-    } catch (err) {
+    } catch {
       alert("Login fallido");
     }
   };
