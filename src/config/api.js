@@ -6,7 +6,7 @@ export const ENDPOINTS = {
   CONTACT: `${API_URL}/api/contact`,
   UPLOAD_MULTIPLE_IMAGES: `${API_URL}/api/upload-multiple`,
   VARIABLES: `${API_URL}/api/variables`,
-  GUARDAR_URL: "https://api.elianiubo.com/api/guardar-url"
+  GUARDAR_URL: `${API_URL}/admin/guardar-url`,
 
 };
 
