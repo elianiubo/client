@@ -11,6 +11,7 @@
   --gold-champagne-darker: #f9d7a2;
   --gold-bronze: #8c6b2d;
   --gold-shadow: rgba(197, 152, 5, 0.584);
+   --header-h: 72px;
 }
 
 /* ExtraLight (normal) */
@@ -127,4 +128,9 @@ html {
   .titles-pages::after {
     width: 50px;
   }
+}
+
+/* en móviles suele ser un poco más bajo */
+@media (max-width: 600px){
+  :root{ --header-h: 56px; }
 }

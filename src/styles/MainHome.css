@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: var(--header-h);
 
 }
 
@@ -101,46 +102,82 @@
   border: 1px solid var(--gold-metallic);
 }
 
-/* ========= RESPONSIVE HERO SECTION ========= */
+/* ========= RESPONSIVE HERO SECTION (width) ========= */
 
 /* Tablets and small laptops */
 @media (max-width: 1024px) {
-  .hero-title{
+  .hero-title {
     font-size: 2.9rem;
-
   }
-  .overlay-content p{
+  .overlay-content p {
     font-size: 1rem;
   }
-  .about-button{
+  .about-button {
     /* padding: 0.5rem 0.9rem; */
     font-size: 0.7rem;
-     margin-top:10px
-
+    margin-top: 10px;
   }
 }
 
 /* Phones */
 @media (max-width: 768px) {
-
-  .hero-title{
+  .hero-title {
     font-size: 2.3rem;
-
   }
-  .overlay-content p{
+  .overlay-content p {
     font-size: 0.8rem;
   }
-  .about-button{
+  .about-button {
     /* padding: 0.5rem 0.9rem; */
     font-size: 0.6rem;
-     margin-top:10px
-
+    margin-top: 10px;
   }
-
-  
 }
 
 /* Very small phones */
 @media (max-width: 480px) {
-  
+  /* (vacío si no necesitas cambios adicionales) */
+}
+
+/* ========= RESPONSIVE HERO SECTION (height) ========= */
+/* — Sólo añade comportamiento vertical sin tocar tu base — */
+
+/* Usa la altura del viewport “real” en móviles y evita cortes */
+@media (max-height: 950px) {
+  .main {
+    height: auto;                           /* deja crecer si hace falta */
+    min-height: calc(100svh - 180px);       /* 100svh maneja barras móviles */
+  }
+  .main-first-content {
+    min-height: inherit;                    /* hereda del contenedor */
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Pantallas más bajas: reduce tipografía y compacta */
+@media (max-height: 780px) {
+  .hero-title { font-size: 3.4rem; }
+  .overlay-content p { font-size: 1.1rem; }
+  .about-button { font-size: 0.9rem; }
+}
+
+/* Aún más baja: mayor compactación */
+@media (max-height: 660px) {
+  .hero-title { font-size: 3rem; }
+  .overlay-content p { font-size: 1rem; }
+  .about-button { font-size: 0.85rem; padding: 0.45rem 0.9rem; }
+}
+
+/* Muy poca altura: prioriza título y botón */
+@media (max-height: 560px) {
+  .hero-title { font-size: 2.4rem; }
+  .overlay-content p { display: none; }     /* oculta el párrafo si no hay espacio */
+  .about-button { font-size: 0.8rem; padding: 0.4rem 0.85rem; }
+}
+
+/* Ultra compacto (móviles en horizontal, splitscreen) */
+@media (max-height: 480px) {
+  .hero-title { font-size: 2rem; }
+  .about-button { font-size: 0.75rem; padding: 0.35rem 0.8rem; }
 }

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Masonry from "react-masonry-css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../styles/ImageDisplay.css";
 import { capitalizeWords, formatParam } from "../utils/helpers";
 import { ENDPOINTS } from "../config";
 import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
 
 
 export default function ImageDisplay() {
@@ -75,9 +76,19 @@ export default function ImageDisplay() {
           slides={filteredImages.map((img) => ({
             src: img.url,
             title: img.title,
-            width: imageMeta[img.id]?.width,   
-            height: imageMeta[img.id]?.height, 
+            width: imageMeta[img.id]?.width,
+            height: imageMeta[img.id]?.height,
           }))}
+          plugins={[Zoom]}
+          zoom={{
+            maxZoomPixelRatio: 3,      // how far you can zoom (3x)
+            zoomInMultiplier: 1.5,     // step for each zoom action
+            doubleTapDelay: 300,       // mobile double-tap
+            doubleClickDelay: 300,     // desktop double-click
+            wheelZoomFactor: 0.2,      // mouse wheel sensitivity
+            pinchZoom: true,           // mobile pinch
+            scrollToZoom: true         // enable wheel zoom
+          }}
         />
       )}
     </div>

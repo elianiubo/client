@@ -84,3 +84,43 @@ transition: color 0.5s ease-out;
     padding: 0.4rem 0.5rem;
   }
 }
+
+/* ===== Compactado por ANCHO ===== */
+@media (max-width: 900px) {
+  .footer { padding: 0.45rem 0.8rem; }
+  .footer-content { margin: 0.8rem 0; }
+  .footer-icons { gap: 1.4rem; }
+  .footer-content .icon { font-size: 1.5rem; }
+  .text { font-size: 0.78rem; }
+  .footer-made-by, .page-link { font-size: 0.68rem; }
+  .footer-links { gap: 0.8rem; font-size: 0.72rem; }
+}
+
+@media (max-width: 600px) {
+  .footer { padding: 0.4rem 0.6rem; }
+  .footer-content { margin: 0.7rem 0; }
+  .footer-icons { gap: 1.2rem; }
+  .footer-content .icon { font-size: 1.4rem; }
+  .text { font-size: 0.75rem; }
+  .footer-links { gap: 0.7rem; font-size: 0.7rem; }
+}
+
+/* ===== Compactado por ALTURA ===== */
+@media (max-height: 680px) {
+  .footer { padding: 0.35rem 0.6rem; }
+  .footer-content { margin: 0.6rem 0; }
+  .footer-icons { gap: 1rem; }
+  .footer-content .icon { font-size: 1.35rem; }
+  .text { font-size: 0.74rem; }
+  .footer-links { gap: 0.6rem; font-size: 0.68rem; }
+}
+
+@media (max-height: 520px) {
+  .footer { padding: 0.3rem 0.5rem; }
+  .footer-content { margin: 0.5rem 0; }
+  .footer-icons { gap: 0.9rem; }
+  .footer-content .icon { font-size: 1.25rem; }
+  .text { font-size: 0.72rem; }
+  .footer-made-by, .page-link { font-size: 0.66rem; }
+  .footer-links { gap: 0.55rem; font-size: 0.66rem; }
+}
