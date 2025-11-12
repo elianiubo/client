@@ -11,7 +11,7 @@ export default function About() {
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        const id = 2; // change this to the ID you want
+        const id = 1; // change this to the ID you want
         const res = await axios.get(`${ENDPOINTS.VARIABLES}/${id}`);
         setVarUrl(res.data.url); // get the URL directly
       } catch (err) {

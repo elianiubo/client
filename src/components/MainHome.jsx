@@ -11,7 +11,7 @@ function MainHome() {
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        const id = 3;
+        const id = 2;
         const res = await axios.get(`${ENDPOINTS.VARIABLES}/${id}`);
         setVarUrl(res.data.url);
         
