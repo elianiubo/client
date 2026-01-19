@@ -42,7 +42,7 @@ export default function About() {
             </ul>
         </div>
         <div className="second-content">
-          <h2 className="about-second-title">Where can I travel</h2>
+          <h2 className="about-second-title">Where can I travel?</h2>
           <div className="image-container">
             {varUrl && (
               <img src={varUrl} alt='FROM DB' />
