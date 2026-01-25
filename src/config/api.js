@@ -10,7 +10,7 @@ export const ENDPOINTS = {
 
 };
 
-export const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dcgj0tvya/image/upload";
+export const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dhfktkjia/image/upload";
 // src/config/apiClient.js
 
 
