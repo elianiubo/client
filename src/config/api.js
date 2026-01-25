@@ -7,6 +7,7 @@ export const ENDPOINTS = {
   UPLOAD_MULTIPLE_IMAGES: `${API_URL}/api/upload-multiple`,
   VARIABLES: `${API_URL}/api/variables`,
   GUARDAR_URL: `${API_URL}/admin/guardar-url`,
+  ADMIN_IMAGES: `${API_URL}/admin/images`,
 
 };
 

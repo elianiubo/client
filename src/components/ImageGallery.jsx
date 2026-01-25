@@ -3,14 +3,14 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import React from "react";
 import { ENDPOINTS } from "../config";
-export default function ImageGallery({ update }) {
+export default function ImageGallery({ update, isAdmin }) {
   const [images, setImages] = useState([]);
   
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await axios.get(ENDPOINTS.IMAGES);
+        const res = await axios.get(ENDPOINTS.ADMIN_IMAGES, { withCredentials: true });
         setImages(res.data);
       } catch (err) {
         console.error("Error al cargar imágenes:", err);
@@ -20,23 +20,35 @@ export default function ImageGallery({ update }) {
     fetchImages();
   }, [update]);
 
-  const handleDelete = async (id) => {
-  if (!window.confirm("¿Are you sure you want to delete this image?")) return;
+//   const handleDelete = async (id) => {
+//   if (!window.confirm("¿Are you sure you want to delete this image?")) return;
 
-  try {
-    await axios.delete(`${ENDPOINTS.IMAGES}/${id}`, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-    });
-    alert("Image deleted successfully");
-    setImages((prev) => prev.filter((img) => img.id !== id));
-  } catch (err) {
-    alert("Error al eliminar imagen");
-    console.error(err);
-  }
-};
+//   try {
+//     await axios.delete(`${ENDPOINTS.IMAGES}/${id}`, {
+//       headers: {
+//         Authorization: `Bearer ${localStorage.getItem("token")}`,
+//       },
+//     });
+//     alert("Image deleted successfully");
+//     setImages((prev) => prev.filter((img) => img.id !== id));
+//   } catch (err) {
+//     alert("Error al eliminar imagen");
+//     console.error(err);
+//   }
+// };
+ const handleDelete = async (id) => {
+    if (!window.confirm("¿Are you sure you want to delete this image?")) return;
 
+    try {
+      // ⚠️ Para eliminar necesitamos autenticación y enviar cookie
+      await axios.delete(`${ENDPOINTS.ADMIN_IMAGES}/${id}`, { withCredentials: true });
+      alert("Image deleted successfully");
+      setImages((prev) => prev.filter((img) => img.id !== id));
+    } catch (err) {
+      alert("Error al eliminar imagen");
+      console.error(err);
+    }
+  };
   const groupedByCategory = images.reduce((acc, img) => {
     const cat = img.category || "Sin categoría";
     if (!acc[cat]) acc[cat] = [];

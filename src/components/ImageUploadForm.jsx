@@ -55,7 +55,7 @@ export default function ImageUploadForm({ triggerUpdate }) {
         // ✅ Subida directa a Cloudinary en carpeta = categoría
         const formData = new FormData();
         formData.append("file", file);
-        formData.append("upload_preset", "signed_preset_elia"); // REEMPLAZA ESTO
+        formData.append("upload_preset", "unsigned_giacco"); // REEMPLAZA ESTO
         formData.append("folder", category.trim()); // aquí usas la categoría como carpeta
 
         const res = await fetch(CLOUDINARY_URL, {
